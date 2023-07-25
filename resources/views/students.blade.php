@@ -11,46 +11,49 @@
     <link href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Student List</h1>
-        <a href="javascript:void(0)" class="btn btn-success" id="createNewStudent" style="float:right">Add</a>
-        <table class="table table-bordered data-table">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-    <div class="modal fade" id="ajaxModel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="modalHeading"></h4>
-                </div>
-                <div class="modal-body">
-                    <form id="studentForm" name="studentForm" class="form-horizontal">
-                        <input type="hidden" name="student_id" id="student_id">
-                        <div class="form-group">
-                            Name : <br>
-                            <input type="text" class="form-control" id="name" name="name" 
-                            placeholder="Enter Name" value="" required>
-                        </div>
-                        <div class="form-group">
-                            Email : <br>
-                            <input type="text" class="form-control" id="email" name="email" 
-                            placeholder="Enter Email" value="" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="saveBtn" value="create">Save</button>
-                    </form>
+    <div class="p-3 text-primary-emphasis bg-warning-subtle border border-primary-subtle rounded-3">
+        <div class="container">
+            <h1 style="text-align:center;margin:20px;height:10px;color:darkblue;">Student List</h1>            
+            <a href="javascript:void(0)" class="btn btn-success" id="createNewStudent" style="float:right">Add</a>
+            <table class="table table-bordered border-primary data-table">
+                <thead>
+                    <tr class="table-dark">
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-success"></tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="ajaxModel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modalHeading"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="studentForm" name="studentForm" class="form-horizontal">
+                            <input type="hidden" name="student_id" id="student_id">
+                            <div class="form-group">
+                                Name : <br>
+                                <input type="text" class="form-control" id="name" name="name" 
+                                placeholder="Enter Name" value="" required>
+                            </div>
+                            <div class="form-group">
+                                Email : <br>
+                                <input type="text" class="form-control" id="email" name="email" 
+                                placeholder="Enter Email" value="" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="saveBtn" value="create">Save</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
         crossorigin="anonymous"></script>

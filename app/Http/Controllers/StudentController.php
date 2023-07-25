@@ -20,11 +20,11 @@ class StudentController extends Controller
                 ->addColumn('action',function($row){
                 $btn = '<a href="javascript:void(0)" data-toggle="tooltip" data-id="' . 
                 $row->id . '" data-original-title="Edit" 
-                class="edit btn btn-primary btn-sm m-1 editStudent">Edit</a>';
+                class="edit btn btn-primary btn-sm m-2 editStudent">Edit</a>';
 
                 $btn .= '<a href="javascript:void(0)" data-toggle="tooltip" data-id="' . 
                 $row->id . '" data-original-title="Delete" 
-                class="delete btn btn-danger btn-sm m-1 deleteStudent">Delete</a>';
+                class="delete btn btn-danger btn-sm m-2 deleteStudent">Delete</a>';
 
                 return $btn;
             })
