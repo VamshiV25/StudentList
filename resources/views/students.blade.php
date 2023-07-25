@@ -111,17 +111,19 @@
             
             $('body').on('click', '.deleteStudent', function () {
                 var student_id = $(this).data('id');
-                confirm("Are You Sure Want To Delete!");
-                $.ajax({
-                    type: "DELETE",
-                    url: "{{ route('students.store') }}/" + student_id,
-                    success: function (data) {
+                var confirmed = confirm("Are You Sure Want To Delete!");
+                if (confirmed) {
+                    $.ajax({
+                        type: "DELETE",
+                        url: "{{ route('students.store') }}/" + student_id,
+                        success: function (data) {
                             table.draw();
                         },
                         error: function (data) {
                             console.log('Error:', data);
                         }
-                });
+                    });
+                }
             });
         
 
